@@ -1,0 +1,351 @@
+/*start for the styles, starting with the body*/
+body {
+	background-color: #D87D4E;  /*  */
+	color: #D2B48C; /*  */
+	font-family: Tahoma, Arial, sans-serif; /*  */
+	text-align: left;  /*  */
+	margin-top: 25px;  /*  */
+	margin-left: 175px; /* placing a margin on the left. to get away from nav */
+	background-image: url(../images/rhpr.jpg); /* the link to the background image */
+	background-repeat: no-repeat; /*  */
+	background-size: cover; /*  */
+	display: block; /*  */
+}
+info {
+	}
+/*header styles*/
+header {
+	color: #6B1D2D; /*  */
+	text-align: center; /*  */
+	text-shadow: -4px 4px 4px gray; /*  */
+}
+/* nav styles*/
+nav {
+    background-color: #8A9A7B;   /*  */
+    width: 175px;                /* make it wide enough for full menu text */
+    position: fixed;             /* THIS is the key – sticks it to the screen */
+    top: 0; 							/*  */
+    left: 0;				   		/*  */
+    height: 100%;               /* full viewport height */
+    text-align: center;				/*  */
+    padding-top: 80px;           /* gives space from the very top */
+    z-index: 1;               /* keeps it above everything */
+}
+
+nav ul {
+    list-style-type: none;   /*  */
+    padding: 0;  /*  */
+    margin: 0;   /*  */
+}
+
+nav a {
+    display: block;    /*  */
+    padding: 18px 20px;          /* bigger clickable area */
+    color: #6B1D2D;  /*  */
+    text-decoration: none;  /*  */
+    font-size: 1.1em;  /*  */
+    transition: all 0.5s;  /*  */
+}
+
+nav a:link    { color: #6B1D2D; }  /*  */
+nav a:visited { color: #D2B48C; }  /*  */
+nav a:hover   {   
+    background-color: #D87D4E;
+    color: #6B1D2D;
+} 											  /*  */
+main {
+	background-color: #6b1d2d;      /*  */
+}
+li { 
+	list-style-type: none;}        /*  */
+/*---------------------------
+----event/room container-----
+---------------------------*/
+
+ 		.container-grid { 
+   display: grid; 					/*  */
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    /*  */
+   gap: 40px;     /*  */
+   padding: 40px;   /*  */
+   margin-left: 240px;  /*  */
+} 
+.room { 
+   background: rgba(255,255,255,0.9);   /*  */
+   border-radius: 12px;    /*  */
+   overflow: hidden;    /*  */
+   box-shadow: 0 8px 20px rgba(0,0,0,0.1);   /*  */
+   }
+.room img { 
+   width: 100%; /*  */
+   height: 220px; /*  */
+   object-fit: cover; /*  */
+   }
+.room-content { 
+   padding: 25px; /*  */
+   text-align: left; /*  */
+}
+.room h3 { 
+   margin: 0; /*  */
+   font-size: 1.8em; /*  */
+   color: #5a2d0c; /*  */
+} 
+.price { 
+   font-size: 1.6em; /*  */
+   color: #8b4431; /*  */
+   font-weight: bold; /*  */
+   margin: 10px 0; /*  */
+} 
+.amenities {
+   list-style: none; /*  */
+   padding: 0; /*  */
+} 
+.amenities li { 
+   padding: 4px 0; /*  */
+} 
+.book-btn { 
+	display: inline-block; /*  */
+	margin-top: 15px; /*  */
+	padding: 12px 24px; /*  */
+	background: #8b4431; /*  */
+	color: white; /*  */
+   text-decoration: none; /*  */
+   border-radius: 6px; /*  */
+   font-weight: bold; /*  */
+} 
+.book-btn:hover { 
+   background: #a05540; /*  */
+} 
+/*---------------------------
+table for the menu
+---------------------------*/
+
+table {
+    width: 100%; /*  */
+    max-width: 900px; /*  */
+    margin: 40px auto; /*  */
+    border-collapse: collapse; /*  */
+    background: rgba(255,255,255,0.96); /*  */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /*  */
+    border-radius: 12px; /*  */
+    overflow: hidden; /*  */
+}
+th {
+    background: #8b4431; /*  */
+    color: white; /*  */
+    padding: 18px; /*  */
+    font-size: 1.6em; /*  */
+    text-align: center; /*  */
+}
+td {
+    padding: 20px; /*  */
+    vertical-align: top; /*  */
+    border-bottom: 1px solid #ddd; /*  */
+}
+tr:last-child td { border-bottom: none; } /*  */
+.meal-name { 
+	font-weight: bold; font-size: 1.3em; color: #5a2d0c; /*  */
+}
+.description { 
+	margin-top: 8px; line-height: 1.5; /*  */
+	}
+p {
+	color: #D2B48C; /*  */
+}
+
+#wrapper {
+     /* pushes everything right so it’s not under the nav */
+    min-height: 100vh;      /* makes sure page is at least full screen */
+    padding-top: 20px; /*  */
+    padding-right: 20px; /*  */
+    padding-left: 10px; /*  */
+    padding-bottom: 30px; /*  */
+    box-sizing: border-box; /*  */
+}
+/*---------------------------
+------styles for footer------
+---------------------------*/
+footer { 
+	background-color: #D87D4E; /*  */
+	color: #6B1D2D; /*  */
+	font-size: .60em; /*  */
+	font-style: italic; /*  */
+	text-align: center; /*  */
+	position: fixed; /* this is defining the space as the absolute screen, 
+	instead of just the area where the body consists, like the faded blue background*/
+	bottom: 0%; /*this is telling the footer to be 0% away from the bottom of the defined space*/
+	left: 0%; /*  */
+	right: 0%;  /*  */
+	border: 2px solid black; /*  */
+	z-index:2; /*  */
+}
+/*styles for form*/
+form {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 50%;
+	text-align: center;
+	margin-left: 1em;
+	
+}
+
+/*---------------------------
+this is the media query that i will struggle on
+---------------------------*/
+
+@media (max-width: 700px) {
+
+	header {
+	
+	}
+	h1 {
+	}
+	h2 {
+	
+	}
+	h3 {
+	}
+	
+	h4 {
+	
+	}
+	nav {
+		position: fixed;
+		width: 100px;
+	}
+	nav a { font-size: 12pt;
+	width: 70%;
+	padding-left: 10px;
+	}
+	body {
+	background-color: #D87D4E; 
+	color: #D2B48C;
+	font-family: Tahoma, Arial, sans-serif; 
+	text-align: center;
+	margin-top: 25px;
+	margin-left:100px;
+	background-image: url(../images/rhpr.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
+	main {
+		margin-left:15px;
+		padding-left: 10px;
+	}
+table {
+    width: 85%;
+    max-width: 750px;
+    margin: 40px auto;
+    margin-bottom:100px;
+    margin-top:75px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+th {
+    background: #8b4431;
+    color: white;
+    padding: 18px;
+    font-size: 1.6em;
+    text-align: center;
+}
+td {
+    padding: 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+.container-grid { 
+   display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+   gap: 10px; 
+   padding: 40px; 
+   margin-left: 55px;
+} 
+.room { 
+   background: rgba(255,255,255,0.9); 
+   border-radius: 12px; 
+   overflow: hidden; 
+   box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+   }
+.room img { 
+   width: 100%; 
+   height: 150px; 
+   object-fit: cover; 
+   }
+.room-content { 
+   padding: 25px; 
+   text-align: left; 
+}
+.room h3 { 
+   margin: 0; 
+   font-size: 1.8em; 
+   color: #5a2d0c; 
+} 
+.price { 
+   font-size: 1.2em; 
+   color: #8b4431; 
+   font-weight: bold; 
+   margin: 10px 0; 
+} 
+.amenities {
+   list-style: none; 
+   padding: 0; 
+} 
+.amenities li { 
+   padding: 4px 0; 
+} 
+.book-btn { 
+	display: inline-block; 
+	margin-top: 15px; 
+	padding: 12px 24px; 
+	background: #8b4431; 
+	color: white; 
+   text-decoration: none; 
+   border-radius: 6px; 
+   font-weight: bold; 
+} 
+.book-btn:hover { 
+   background: #a05540; 
+} 
+}
+@media (min-width 701px) { 
+	header {}
+	body {
+	background-color: #D87D4E; 
+	color: #D2B48C;
+	font-family: Tahoma, Arial, sans-serif; 
+	text-align: center;
+	margin-top: 25px;
+	margin-left:175px;
+	background-image: url(../images/rhpr.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+table {
+    width: 85%;
+    max-width: 750px;
+    margin: 100px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 12px; /*curves the corners making the tabels look cleaner*/
+    overflow: hidden;
+}
+th {
+    background: #8b4431;
+    color: white;
+    padding: 18px;
+    font-size: 1.6em;
+    text-align: center;
+}
+td {
+    padding: 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+}
+}

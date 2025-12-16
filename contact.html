@@ -4,6 +4,8 @@
 	<title>Contact</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles/webstyle.css">
+	<meta name="keywords" content="bed and breakfast,Breakfast Embassy ">
+	<meta name="author" content="Tyler Hunt">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="../favicon.ico">
 </head>
@@ -26,7 +28,25 @@
 		<a href="contact.html">Contact</a> 
 	</nav>
 	<main>
-		<p> im not to sure what to put here quite yet</p> <!--im very certain this will change very soon-->
+		<form method="post" action="https://webdevbasics.net/scripts/javajam8.php">
+			<label for="myName">Name: </label>
+			<input type="text" id="myName" name="myName" required>
+			
+			<label for="myEmail">E-mail: </label>
+			<input type="email" id="myEmail" name="myEmail" required>
+			
+			<label for="mycheckin"> Check in: </label>
+			<input type="date" id="mycheckin" name="mycheckin" required>
+			
+			<label for="mycheckout"> Check out: </label>
+			<input type="date" id="mycheckout" name="mycheckout" required>
+			
+			<label for="myExperience">Experience: </label>
+			<textarea name="myExperience" id="myExperience" rows="2" cols="20" required>
+			</textarea>
+			
+			<input type="submit" value="Submit"><input type="reset">
+			</form>
 	</main>
 	</div>
 <!--Footer section-->
