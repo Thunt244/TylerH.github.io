@@ -1,8 +1,5 @@
 /*start for the styles, starting with the body*/
 
-/*---------------------------
-this is the media query that i will struggle on
----------------------------*/
 body {
 	background-color: #D87D4E; 	
 	color: #D2B48C;
@@ -44,7 +41,7 @@ nav {
 	}
 	
 	main {
-		margin-left:15px;
+		margin-left:100px;
 		padding-left: 10px;
 		background-color: #6b1d2d;
 	}
@@ -155,22 +152,16 @@ where my media query should start
 @media (min-width: 701px) {
 
 	body {
-		background-color: #D87D4E;  /* background color for body */
-		color: #D2B48C; /* color of font */
-		font-family: Tahoma, Arial, sans-serif; /* actual font */
+		
 		text-align: left;  /* where the text aligns */
 		margin-top: 25px;  /* margin for the top of the body */
 		margin-left: 175px; /* placing a margin on the left. to get away from nav */
-		background-image: url(../images/rhpr.jpg); /* the link to the background image */
-		background-repeat: no-repeat; /* repeat or not for the image */
-		background-size: cover; /* size of the  */
 		display: block; /* how the body is displayed */
 	}
 	info {
 	}
 	/*header styles*/
 	header {
-		color: #6B1D2D; /* color of font */
 		text-align: center; /* where the text aligns */
 		text-shadow: -4px 4px 4px gray; /* makes the shadow for text */
 	}
