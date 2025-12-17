@@ -1,81 +1,90 @@
 /*start for the styles, starting with the body*/
+
 body {
-	background-color: #D87D4E; 
+	background-color: #D87D4E; 	
 	color: #D2B48C;
 	font-family: Tahoma, Arial, sans-serif; 
 	text-align: center;
 	margin-top: 25px;
-	margin-left:175px;
+	margin-left:100px;
 	background-image: url(../images/rhpr.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;	
 }
-/*header styles*/
-header {
-	color: #6B1D2D;
-	text-align: center;
-	text-shadow: -4px 4px 4px gray; 
-	font-size: .5em;
-}
-/* nav styles*/
 nav {
-    background-color: #8A9A7B;
-    width: 175px;                /* make it wide enough for full menu text */
-    position: fixed;             /* THIS is the key – sticks it to the screen */
-    top: 0;
-    left: 0;
-    height: 88.3%;               /* full viewport height */
+	background-color: #8A9A7B;   /* background color for nav */
+	width: 100px;                /* make it wide enough for full menu text */
+	position: fixed;             /* THIS is the key – sticks it to the screen */
+	top: 0; 						/* how far from the top is it? */
+	left: 0;				   		/* how far from the left is it? */
+	height: 100%;               /* full viewport height */
+	text-align: center;				/* where the text aligns */
+	padding-top: 80px;           /* gives space from the very top */
+	z-index: 1;               /* keeps it above everything */
+}
+
+	nav a {
+		display: block;    /* how the body is displayed */
+		padding: 18px 10px;    /* padding on nav a */
+		color: #6B1D2D;  /* color of font */
+		text-decoration: none;  /* gets rid of all text decor */
+		font-size: 12pt;  /* controls font size */
+		width: 70%;
+		transition: all 0.5s;  /* how fast the things change */
+	}
+
+	nav a:link    { color: #6B1D2D; }  /* color of font when its a link */
+	nav a:visited { color: #D2B48C; }  /* color of font when visited */
+	nav a:hover   {   
+		background-color: #D87D4E;		/* background color for nav when hovered over */
+		color: #6B1D2D;
+	}
+	
+	main {
+		margin-left:100px;
+		padding-left: 10px;
+		background-color: #6b1d2d;
+	}
+table {
+    width: 85%;
+    max-width: 750px;
+    margin: 40px auto;
+    margin-bottom:100px;
+    margin-top:75px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.96);	
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+th {
+    background: #8b4431;	
+    color: white;
+    padding: 18px;
+    font-size: 1.6em;
     text-align: center;
-    padding-top: 80px;           /* gives space from the very top */
-    z-index: 1000;               /* keeps it above everything */
 }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+td {
+    padding: 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
 }
-
-nav a {
-    display: block;
-    padding: 18px 20px;          /* bigger clickable area */
-    color: #6B1D2D;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: all 0.5s;
-}
-
-nav a:link    { color: #6B1D2D; }
-nav a:visited { color: #D2B48C; }
-nav a:hover   { 
-    background-color: #D87D4E;
-    color: #6B1D2D;
-}
-main {
-	background-color: #6b1d2d;
-}
-li { 
-	list-style-type: none;}
-/*---------------------------
-----event/room container-----
----------------------------*/
-
- 		.container-grid { 
+.container-grid { 
    display: grid; 
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-   gap: 40px; 
+   gap: 10px; 
    padding: 40px; 
-   margin-left: 240px; 
+   margin-left: 55px;
 } 
 .room { 
-   background: rgba(255,255,255,0.9); 
+   background: rgba(255,255,255,0.9); 	
    border-radius: 12px; 
    overflow: hidden; 
    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
    }
 .room img { 
    width: 100%; 
-   height: 220px; 
+   height: 150px; 
    object-fit: cover; 
    }
 .room-content { 
@@ -88,7 +97,7 @@ li {
    color: #5a2d0c; 
 } 
 .price { 
-   font-size: 1.6em; 
+   font-size: 1.2em; 
    color: #8b4431; 
    font-weight: bold; 
    margin: 10px 0; 
@@ -104,118 +113,197 @@ li {
 	display: inline-block; 
 	margin-top: 15px; 
 	padding: 12px 24px; 
-	background: #8b4431; 
+	background: #8b4431; 	
 	color: white; 
    text-decoration: none; 
    border-radius: 6px; 
    font-weight: bold; 
 } 
 .book-btn:hover { 
-   background: #a05540; 
+   background: #a05540; 	
 } 
-/*---------------------------
-table for the menu
----------------------------*/
-
-table {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-    border-collapse: collapse;
-    background: rgba(255,255,255,0.96);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    overflow: hidden;
-}
-th {
-    background: #8b4431;
-    color: white;
-    padding: 18px;
-    font-size: 1.6em;
-    text-align: center;
-}
-td {
-    padding: 20px;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd;
-}
-tr:last-child td { border-bottom: none; }
-.meal-name { 
-	font-weight: bold; font-size: 1.3em; color: #5a2d0c;
-}
-.description { 
-	margin-top: 8px; line-height: 1.5; 
-	}
-p {
-	color: #D2B48C;
-}
-
-#wrapper {
-     /* pushes everything right so it’s not under the nav */
-    min-height: 100vh;      /* makes sure page is at least full screen */
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 10px;
-    padding-bottom: 30px;
-    box-sizing: border-box;
-}
-/*---------------------------
-------styles for footer------
----------------------------*/
 footer { 
-	background-color: #D87D4E;
-	color: #6B1D2D;
-	font-size: .60em;
-	font-style: italic;
-	text-align: center;
-	position: fixed; /* this is defining the space as the absolute screen, 
-	instead of just the area where the body consists, like the faded blue background*/
-	bottom: 0%; /*this is telling the footer to be 0% away from the bottom of the defined space*/
-	left: 0%;
-	right: 0%; 
-	border: 2px solid black;
-	
-}
+		background-color: #D87D4E; /* background color for footer */
+		color: #6B1D2D; /* color of font */
+		font-size: .60em; /* size of font */
+		font-style: italic; /* style of font */
+		text-align: center; /* where the text aligns */
+		position: fixed; /* THIS is the key – sticks it to the screen */
+		bottom: 0%; /*this is telling the footer to be 0% away from the bottom of the defined space*/
+		left: 0%; /* how far from the left is it? */
+		right: 0%;  /* how far from the right is it? */
+		border: 2px solid black; /*  */
+		z-index:2; /* where it is positioned on the z-axis of the page z being how "close to us" it is */
+	}
+	form {
+		display: flex;		/* how the form is displayed */
+		flex-direction: column;
+		padding-left: 1em;
+		padding-right: 1em;
+		width: 50%;
+		text-align: center;
+		margin-left: 1em;
 
 /*---------------------------
-this is the media query that i will struggle on
----------------------------*/
 
-@media (min-width: 701px) { 
-	header {
-		font-size: 1.5em;
-	}
+where my media query should start
+
+---------------------------*/
+@media (min-width: 701px) {
+
 	body {
-	background-color: #D87D4E; 
-	color: #D2B48C;
-	font-family: Tahoma, Arial, sans-serif; 
-	text-align: center;
-	margin-top: 25px;
-	margin-left:175px;
-	background-image: url(../images/rhpr.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+		
+		text-align: left;  /* where the text aligns */
+		margin-top: 25px;  /* margin for the top of the body */
+		margin-left: 175px; /* placing a margin on the left. to get away from nav */
+		display: block; /* how the body is displayed */
 	}
+	info {
+	}
+	/*header styles*/
+	header {
+		text-align: center; /* where the text aligns */
+		text-shadow: -4px 4px 4px gray; /* makes the shadow for text */
+	}
+	/* nav styles*/
+	nav {
+		background-color: #8A9A7B;   /* background color for nav */
+		width: 175px;                /* make it wide enough for full menu text */
+		position: fixed;             /* THIS is the key – sticks it to the screen */
+		top: 0; 						/* how far from the top is it? */
+		left: 0;				   		/* how far from the left is it? */
+		height: 100%;               /* full viewport height */
+		text-align: center;				/* where the text aligns */
+		padding-top: 80px;           /* gives space from the very top */
+		z-index: 1;		/* keeps it above everything */
+	}
+
+	nav a {
+		display: block;    /* how the body is displayed */
+		padding: 18px 20px;          /* bigger clickable area */
+		color: #6B1D2D;  /* color of font */
+		text-decoration: none;  /* gets rid of all text decor */
+		font-size: 1.1em;  /* controls font size */
+		transition: all 0.5s;  /* how fast the things change */
+	}
+
+	nav a:link    { color: #6B1D2D; }  /* color of font when its a link */
+	nav a:visited { color: #D2B48C; }  /* color of font when visited */
+	nav a:hover   {   
+		background-color: #D87D4E;		/* background color for nav when hovered over */
+		color: #6B1D2D;
+	}
+	main {
+		background-color: #6b1d2d;      /* background color for main */
+	}
+	li { 
+		list-style-type: none;
+	}        /* gets rid of the bullet points */
+	/*---------------------------
+	----event/room container-----
+	---------------------------*/
+
+	.container-grid { 
+	   display: grid; 			/* how the container is displayed */
+	   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));	/* controls GTC repeat and the size */
+	   gap: 40px;     /* created a grid gap */
+	   padding: 40px;   /* padding in all directions */
+	   margin-left: 240px;  /* how far from the left is it? */
+	} 
+	.room { 
+	   background: rgba(255,255,255,0.9);   /* background color for room */
+	   border-radius: 12px;    /* controls border radius making a rounded corner for the table */
+	   overflow: hidden; /* controls overflow */
+	   box-shadow: 0 8px 20px rgba(0,0,0,0.1);   /* controls box shadow */
+	}
+	.room img { 
+	   width: 100%; /* controls how much of the page the table takes up */
+	   height: 220px; /* controls height */
+	   object-fit: cover; /* how does the room img fit the parent */
+	}
+	.room-content { 
+	   padding: 25px; /* padding in all directions */
+	   text-align: left; /* where the text aligns */
+	}
+	.room h3 { 
+	   margin: 0; /* margin in all directions */
+	   font-size: 1.8em; /* controls font size */
+	   color: #5a2d0c; /* color of font */
+	} 
+	.price { 
+	   font-size: 1.6em; /* controls the size of the font */
+	   color: #8b4431; /* color of font */
+	   font-weight: bold; /* coltrols font weight */
+	   margin: 10px 0; /* margin in all directions */
+	} 
+	.amenities {
+	   list-style: none; /* gets rid of the bullet points */
+	   padding: 0; /* padding in all directions */
+	} 
+	.amenities li { 
+	   padding: 4px 0; /* padding in all directions */
+	} 
+	.book-btn { 
+		display: inline-block; /* how the book button is displayed */
+		margin-top: 15px; /* how far from the top is it? */
+		padding: 12px 24px; /* padding in all directions */
+		background: #8b4431; /* background color */
+		color: white; /* color of font */
+	   text-decoration: none; /* getting rid of all text decor */
+	   border-radius: 6px; /* controls border radius making a rounded corner for the table */
+	   font-weight: bold; /* the weight of the font */
+	} 
+	.book-btn:hover { 
+	   background: #a05540; /* background color for book button */
+	} 
+	/*---------------------------
+	table for the menu
+	---------------------------*/
+
 	table {
-    width: 85%;
-    max-width: 750px;
-    margin: 100px;
-    border-collapse: collapse;
-    background: rgba(255,255,255,0.96);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    border-radius: 12px; /*curves the corners making the tabels look cleaner*/
-    overflow: hidden;
+		width: 80%; /* controls how much of the page the table takes up */
+		max-width: 900px; /* controls the max-width for the table */
+		margin: 40px auto; /* how far from everything is it? */
+		border-collapse: collapse; /* does the border collapse? yes */
+		background-color: rgba(255,255,255,0.96); /* background color for table */
+		box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* shadow for box */
+		border-radius: 12px; /* controls border radius making a rounded corner for the table */
+		overflow: hidden; /* controls overflow */
 	}
 	th {
-    background: #8b4431;
-    color: white;
-    padding: 18px;
-    font-size: 1.6em;
-    text-align: center;
+		background: #8b4431; /* background color for table header */
+		color: white; /* color of font */
+		padding: 18px; /* how far from everything is it? */
+		font-size: 1.6em; /* size of font */
+		text-align: center; /* where the text aligns */
 	}
 	td {
-    padding: 20px;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd;
+		padding: 20px; /* how far from everything is it? */
+		vertical-align: top; /* where does it align vertically */
+		border-bottom: 1px solid #ddd; /* the border on the bottom */
+	}
+	tr:last-child td { border-bottom: none; } 
+	.meal-name { 
+		font-weight: bold; 	/* controls font weight */
+		font-size: 1.3em; 	/* controls font size */
+		color: #5a2d0c; 	/* controls the color */
+	}
+	.description { 
+		margin-top: 8px; line-height: 1.5; /* how far from the top is it? */
+	}
+	p {
+		color: #D2B48C; /* color of font */
+	}
+
+	/*styles for form*/
+	form {
+		display: flex;		/* how the form is displayed */
+		flex-direction: column;
+		padding-left: 1em;
+		padding-right: 1em;
+		width: 50%;
+		text-align: center;
+		margin-left: 1em;
+		
 	}
 }
