@@ -5,7 +5,7 @@ this is the media query that i will struggle on
 ---------------------------*/
 body {
 	background-color: #D87D4E; 	
-	color: #D2B48C;
+	color: #eee;
 	font-family: Tahoma, Arial, sans-serif; 
 	text-align: center;
 	margin-top: 25px;
@@ -155,10 +155,77 @@ td {
 
 /* Prevent content from being hidden behind the sticky bar */
 main {
-    padding-bottom: 130px;   /* Adjust this value if your bar height changes */
+    padding-bottom: 130px;  
+}
+/* Review Table Styles */
+.review-table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Responsive adjustment for mobile */
+.review-table caption {
+    background-color: #b85c38;
+    color: white;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-table th,
+.review-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.review-table th {
+    background-color: #f4e8d8;
+    width: 28%;
+    color: #b85c38;
+    font-weight: 400;
+}
+
+.review-table tr:last-child td {
+    border-bottom: none;
+}
+
+.review-text {
+    line-height: 1.65;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.star {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.reviews-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    color: #eee;
+    margin-bottom: 40px;
+}
+/*---------------------------------------
+
+
+-----Responsive adjustment for mobile----
+
+
+----------------------------------------*/
 @media (max-width: 768px) {
     #sticky-total {
         flex-direction: column;
@@ -186,6 +253,7 @@ footer {
 		padding-left: 1em;
 		padding-right: 1em;
 		width: 50%;
+		height: 50%;
 		text-align: center;
 		margin-left: 1em;
 	}
@@ -357,6 +425,7 @@ where my media query should start
 		padding-left: 1em;
 		padding-right: 1em;
 		width: 50%;
+		height: 50%;
 		text-align: center;
 		margin-left: 1em;
 		
