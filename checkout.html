@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>thunt The Breakfast Embassy</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/webstyle.css"> <!--this links the css styles-->
+	<meta name="keywords" content="bed and breakfast,Breakfast Embassy ">
+	<meta name="author" content="Tyler Hunt">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="/javascript/giftshopscript.js" defer></script>
+</head>
+<!--this is the start of the body of the page-->
+<body>
+	<div id="wrapper"> <!--where the wrapper gets involved-->
+	<header>
+        <h1>The Breakfast Embassy</h1>
+        <p class="tagline">Checkout</p>
+    </header>
+	<nav>
+ <!--herein lies the navigation section of my website-->
+ <div style="text-align:center; padding: 30px 20px 40px;">
+            <img src="logo.png" alt="The Breakfast Embassy" width="75px" style="max-width:100%;">
+    </div>
+ 	<h3>The Breakfast Embassy</h3>
+		<a href="index.html">Home</a>
+		<a href="menu.html">Menu</a> 
+		<a href="rooms/ambassador-suites.html">Ambassador Suites</a>
+		<a href="events/events.html">Events</a>  
+		<a href="contact.html">Contact</a> 
+		<a href="price.html">Estimated Price</a>
+		<a href="reviews.html">Reviews</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="giftshop.html">Gift Shop</a>
+	</nav>
+<body>
+    <main class="checkout-page">
+        <h2>Review Your Order</h2>
+        
+        <div class="order-review" id="orderReview">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+
+        <form id="checkoutForm" onsubmit="handleSubmit(event)">
+    
+    <div class="checkout-form-container">
+
+        <!-- LEFT SIDE - BILLING -->
+        <div>
+            <h2>Billing Information</h2>
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="billingName" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="billingEmail" required>
+            </div>
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="tel" id="billingPhone" required>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" id="billingAddress" required>
+            </div>
+            <div class="form-group">
+                <label>City:</label>
+                <input type="text" id="billingCity" required>
+            </div>
+            <div class="form-group">
+                <label>Zip Code:</label>
+                <input type="text" id="billingZip" required maxlength="10">
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE - SHIPPING -->
+        <div>
+            <h2>Shipping Information</h2>
+            <button type="button" onclick="copyBillingToShipping()" class="copy-btn">
+                Copy Billing Address →
+            </button>
+            
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="shippingName" required>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" id="shippingAddress" required>
+            </div>
+            <div class="form-group">
+                <label>City:</label>
+                <input type="text" id="shippingCity" required>
+            </div>
+            <div class="form-group">
+                <label>Zip Code:</label>
+                <input type="text" id="shippingZip" required maxlength="10">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-buttons">
+        <button type="button" onclick="goBack()">← Back to Shop</button>
+        <button type="submit">Place Order</button>
+    </div>
+</form>
+    </main>
+</body>
+</html>
