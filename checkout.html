@@ -10,6 +10,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="/javascript/giftshopscript.js" defer></script>
+    <script src="/javascript/checkoutscript.js" defer></script>
 </head>
 <!--this is the start of the body of the page-->
 <body>
@@ -39,7 +40,7 @@
         <h2>Review Your Order</h2>
         
         <div class="order-review" id="orderReview">
-            <!-- Cart items will be loaded here by JavaScript -->
+            <!-- Cart items will be loaded here -->
         </div>
 
         <form id="checkoutForm" onsubmit="handleSubmit(event)">
@@ -70,6 +71,10 @@
                 <input type="text" id="billingCity" required>
             </div>
             <div class="form-group">
+                <label>State:</label>
+                <input type="text" id="billingState" required>
+            </div>
+            <div class="form-group">
                 <label>Zip Code:</label>
                 <input type="text" id="billingZip" required maxlength="10">
             </div>
@@ -93,6 +98,10 @@
             <div class="form-group">
                 <label>City:</label>
                 <input type="text" id="shippingCity" required>
+            </div>
+            <div class="form-group">
+                <label>State:</label>
+                <input type="text" id="shippingState" required>
             </div>
             <div class="form-group">
                 <label>Zip Code:</label>
