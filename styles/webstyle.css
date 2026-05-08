@@ -20,15 +20,18 @@ nav {
 	position: fixed;             /* THIS is the key – sticks it to the screen */
 	top: 0; 						/* how far from the top is it? */
 	left: 0;				   		/* how far from the left is it? */
-	height: 100%;               /* full viewport height */
+	height: 90%;               /* full viewport height */
 	text-align: center;				/* where the text aligns */
-	padding-top: 80px;           /* gives space from the very top */
+	padding-top: 0px;;        
 	z-index: 1;               /* keeps it above everything */
 }
 
 	nav a {
 		display: block;    /* how the body is displayed */
-		padding: 18px 10px;    /* padding on nav a */
+		padding-top: 7px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px; /* padding on nav a */
 		color: #6B1D2D;  /* color of font */
 		text-decoration: none;  /* gets rid of all text decor */
 		font-size: 12pt;  /* controls font size */
@@ -483,40 +486,52 @@ footer {
     width: 100%;
     margin-top: 8px;
 }
-/* ====================== CHECKOUT PAGE ====================== */
+/*---------------------
+
+----CHECKOUT LAYOUT----
+
+---------------------*/
 
 .checkout-page {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
 }
 
-.checkout-page h2 {
-    color: #b85c38;
-    margin: 25px 0 15px 0;
+.checkout-container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 40px;
 }
 
-/* Two-column layout for Billing & Shipping */
+.order-summary {
+    background: #f8f1e9;
+    margin-left: 58%;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    position: fixed;
+    top: 20px;
+}
+
 .checkout-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* Form field styling - Labels on the left */
 .form-group {
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     gap: 15px;
 }
 
 .form-group label {
-    width: 140px;
+    width: 130px;
     font-weight: 600;
     color: #f4e8d8;
     text-align: right;
-    flex-shrink: 0;
 }
 
 .form-group input {
@@ -524,56 +539,33 @@ footer {
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-size: 1rem;
 }
 
 .form-group input:focus {
     border-color: #b85c38;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(184, 92, 56, 0.1);
 }
 
-/* Order Review */
-.order-review {
-    background: #f8f1e9;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-}
-
-.review-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.order-total {
-    margin-top: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    text-align: right;
-}
-
-.order-total h3 {
+.copy-btn {
+    background: #f4e8d8;
     color: #b85c38;
-    margin: 10px 0;
+    border: 1px solid #b85c38;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
-/* Buttons */
 .form-buttons {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
 }
 
 .form-buttons button {
-    padding: 14px 32px;
+    padding: 14px 30px;
     font-size: 1.1rem;
     margin: 0 10px;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
 }
 
 .form-buttons button:first-child {
@@ -586,29 +578,7 @@ footer {
     color: white;
     font-weight: bold;
 }
-
-.form-buttons button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive - Stack on mobile */
-@media (max-width: 768px) {
-    .checkout-form-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
     
-    .form-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .form-group label {
-        width: auto;
-        text-align: left;
-    }
-}
 /*---------------------------
 
 where my media query should start
@@ -644,7 +614,7 @@ where my media query should start
 		left: 0;				   		/* how far from the left is it? */
 		height: 100%;               /* full viewport height */
 		text-align: center;				/* where the text aligns */
-		padding-top: 80px;           /* gives space from the very top */
+		padding-top: 10px;           /* gives space from the very top */
 		z-index: 1;		/* keeps it above everything */
 	}
 
@@ -780,5 +750,11 @@ where my media query should start
 		height: 50%;
 		text-align: center;
 		margin-left: 1em;
-		
-	}}
+    }
+	.checkout-container {
+        grid-template-columns: 1fr;
+    }
+    .checkout-form-container {
+        grid-template-columns: 1fr;
+    }
+	}

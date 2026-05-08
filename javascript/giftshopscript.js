@@ -19,16 +19,16 @@ const TAX_RATE = 0.0825;
 const products = [
     {
         id: 1,
-        name: "French Room Mug",
+        name: "French Mug",
         price: 18.99,
-        description: "Elegant porcelain mug with French room design",
-        image: "images/gift-french-mug.jpeg"
+        description: "Elegant porcelain mug with French inspired designs",
+        image: "images/french-mug.jpeg"
     },
     {
         id: 2,
         name: "Italian Espresso Set",
         price: 34.99,
-        description: "2 espresso cups & saucers inspired by our Italian room",
+        description: "2 espresso cups & saucers inspired by italy",
         image: "images/gift-italian-espresso.jpeg"
     },
     {
