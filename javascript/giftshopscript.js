@@ -20,21 +20,21 @@ const products = [
     {
         id: 1,
         name: "French Mug",
-        price: 18.99,
+        price: 8.00,
         description: "Elegant porcelain mug with French inspired designs",
         image: "images/french-mug.jpeg"
     },
     {
         id: 2,
         name: "Italian Espresso Set",
-        price: 34.99,
+        price: 14.00,
         description: "2 espresso cups & saucers inspired by italy",
         image: "images/gift-italian-espresso.jpeg"
     },
     {
         id: 3,
         name: "Snow Globe",
-        price: 24.99,
+        price: 25.00,
         description: "Snow Globe with logo in the center",
         image: "images/snow-globe.jpeg"
     },
@@ -173,7 +173,7 @@ function showCart() {
     }
 
     let subtotal = 0;
-
+    // adding item to cart and total
     cart.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         subtotal += itemTotal;
@@ -203,7 +203,7 @@ function showCart() {
     const tax = subtotal * TAX_RATE;
     const total = subtotal + tax;
 
-    // Display breakdown
+    // Display breakdown of prices
     document.getElementById("cartSubTotal").textContent = subtotal.toFixed(2);
     document.getElementById("cartTax").textContent = tax.toFixed(2);
     document.getElementById("cartTotal").textContent = total.toFixed(2);

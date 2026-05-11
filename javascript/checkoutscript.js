@@ -27,7 +27,7 @@ function displayOrderReview() {
     }
 
     let subtotal = 0;
-
+    // Adding item to cart price and building cart
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         subtotal += itemTotal;
@@ -39,7 +39,7 @@ function displayOrderReview() {
             </div>
         `);
     });
-
+    // Setting tax and total from subtotal above
     const tax = subtotal * 0.0825;
     const total = subtotal + tax;
 
@@ -52,9 +52,9 @@ function displayOrderReview() {
     `);
 }
 
-// FIXED COPY FUNCTION
+// COPY FUNCTION
 function copyBillingToShipping() {
-    console.log("Copy button clicked"); // For debugging
+    console.log("Copy button clicked"); // For debugging!!
 
     document.getElementById("shippingName").value = document.getElementById("billingName").value;
     document.getElementById("shippingAddress").value = document.getElementById("billingAddress").value;
@@ -70,7 +70,7 @@ function handleSubmit(e) {
     localStorage.removeItem("cart");
     window.location.href = "giftshop.html";
 }
-
+// Go Back button
 function goBack() {
     window.location.href = "giftshop.html";
 }

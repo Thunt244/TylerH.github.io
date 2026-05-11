@@ -60,7 +60,7 @@ const galleryItems = [
 
 let currentSlide = 0;
 let autoPlayInterval;
-
+// creating slides for the slides... lol
 function createSlides() {
     const container = document.getElementById("slideshow");
     container.innerHTML = "";
@@ -80,7 +80,7 @@ function createSlides() {
         container.appendChild(slide);
     });
 }
-
+// showing said slides 
 function showSlide(index) {
     const slides = document.querySelectorAll(".slide");
     
@@ -90,6 +90,7 @@ function showSlide(index) {
     slides.forEach(slide => slide.classList.remove("active"));
     slides[currentSlide].classList.add("active");
 }
+/* Adding the buttons for next and last and what not */
 
 function nextSlide() {
     currentSlide++;
@@ -108,7 +109,7 @@ function startAutoPlay() {
 function stopAutoPlay() {
     clearInterval(autoPlayInterval);
 }
-
+// the actual sliding of the show
 function initSlideshow() {
     createSlides();
 
@@ -130,5 +131,5 @@ function initSlideshow() {
 
     startAutoPlay();
 }
-
+// running said show
 initSlideshow();
